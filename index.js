@@ -5,12 +5,15 @@ class Polygon{
     get countSides(){
         return this.sides.length
     }
-    get perimeter(){
-        return this.sides.reduce(myfunc)
-        function myfunc(memo, e){
-          return memo + e
-        }
+    get perimeter() {
+    if (!Array.isArray(this.sides)) return;
+    let sum = 0;
+    for (var int of this.sides) {
+      sum += int
     }
+    return sum
+  }
+}
 }
 
 class Triangle extends Polygon{

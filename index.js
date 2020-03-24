@@ -13,7 +13,7 @@ class Polygon{
     }
     return sum
   }
-}
+
 }
 
 class Triangle extends Polygon{
